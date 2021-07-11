@@ -1,16 +1,26 @@
 package com.github.turtlelabsmc.runes;
 
+import com.github.turtlelabsmc.runes.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
 
 public class RunesMod implements ModInitializer
 {
+	public static final ItemGroup RUNES_ITEMGROUP = FabricItemGroupBuilder.build(modId("main_tab"), () -> new ItemStack(ItemRegistry.BLANK_RUNE));
+
 	@Override
 	public void onInitialize()
 	{
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
 		System.out.println("Hello Fabric world! - from RunesMod");
+
+		ItemRegistry.register();
+	}
+
+	public static Identifier modId(String path)
+	{
+		return new Identifier("runes", path);
 	}
 }
