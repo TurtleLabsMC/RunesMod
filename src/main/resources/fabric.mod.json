@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "runes",
+  "version": "${version}",
+
+  "name": "Runes",
+  "description": "Our official attempt at making one of the best Runes mods out there!",
+  "authors": [
+    "TurtleLabsMC"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "https://github.com/TurtleLabsMC/RunesMod"
+  },
+
+  "license": "",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.turtlelabsmc.runes.RunesMod"
+    ]
+  },
+  "mixins": [
+    "runes.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
