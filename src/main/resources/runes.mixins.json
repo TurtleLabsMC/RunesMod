@@ -4,6 +4,7 @@
   "package": "com.github.turtlelabsmc.runes.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "LivingEntityMixin"
   ],
   "client": [
   ],
