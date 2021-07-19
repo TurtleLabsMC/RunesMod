@@ -26,5 +26,6 @@ public class OceansBlessingRune extends Item{
     }
     private void addStatusEffect(StatusEffectInstance statusEffectInstance, LivingEntity livingEntity) {
         livingEntity.addStatusEffect(statusEffectInstance);
+
     }
 }
