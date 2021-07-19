@@ -1,6 +1,7 @@
 package com.github.turtlelabsmc.runes.registry;
 
 import com.github.turtlelabsmc.runes.RunesMod;
+import com.github.turtlelabsmc.runes.item.OceansBlessingRune;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -13,7 +14,7 @@ public class ItemRegistry
     private static final Map<Identifier, Item> ITEMS = new HashMap<>();
 
     public static final Item BLANK_RUNE = addToRegistry("blank_rune", new Item(addedToMainItemGroup()));
-    public static final Item OCEANS_BLESSING_RUNE = addToRegistry("oceans_blessing_rune", new Item(addedToMainItemGroup()));
+    public static final Item OCEANS_BLESSING_RUNE = addToRegistry("oceans_blessing_rune", new OceansBlessingRune(addedToMainItemGroup()));
 
     public static void register()
     {

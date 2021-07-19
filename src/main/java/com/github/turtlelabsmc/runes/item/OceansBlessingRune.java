@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class OceansBlessingRune extends Item {
+public class OceansBlessingRune extends Item{
     public OceansBlessingRune(Settings settings)
     {
         super(settings);
@@ -18,8 +18,13 @@ public class OceansBlessingRune extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (stack.getItem() == ItemRegistry.OCEANS_BLESSING_RUNE) {
-            System.out.println("Holding Rune");
+        if (entity instanceof LivingEntity livingEntity) {
+            if (stack.getItem().equals(ItemRegistry.OCEANS_BLESSING_RUNE)) {
+                addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 60, 1), livingEntity);
+            }
         }
+    }
+    private void addStatusEffect(StatusEffectInstance statusEffectInstance, LivingEntity livingEntity) {
+        livingEntity.addStatusEffect(statusEffectInstance);
     }
 }
