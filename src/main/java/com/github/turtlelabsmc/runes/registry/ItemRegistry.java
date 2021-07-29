@@ -22,13 +22,13 @@ public class ItemRegistry
         }
     }
 
-    private static Item addToRegistry(String registryName, Item item)
+    protected static Item addToRegistry(String registryName, Item item)
     {
         ITEMS.put(RunesMod.modId(registryName), item);
         return item;
     }
 
-    private static Item.Settings addedToMainItemGroup()
+    protected static Item.Settings addedToMainItemGroup()
     {
         return new Item.Settings().group(RunesMod.RUNES_ITEMGROUP);
     }

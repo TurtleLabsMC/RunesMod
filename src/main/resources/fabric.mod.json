@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.github.turtlelabsmc.runes.RunesMod"
+    ],
+    "client": [
+      "com.github.turtlelabsmc.runes.client.RunesModClient"
     ]
   },
   "mixins": [

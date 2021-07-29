@@ -1,5 +1,6 @@
 package com.github.turtlelabsmc.runes;
 
+import com.github.turtlelabsmc.runes.registry.BlockRegistry;
 import com.github.turtlelabsmc.runes.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -16,6 +17,7 @@ public class RunesMod implements ModInitializer
 	{
 		System.out.println("Hello Fabric world! - from RunesMod");
 
+		BlockRegistry.register();
 		ItemRegistry.register();
 	}
 
